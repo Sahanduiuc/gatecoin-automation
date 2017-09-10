@@ -1,6 +1,6 @@
 # gatecoin-automation
 
-[![Known Vulnerabilities](https://snyk.io/test/github/thomasmktong/gatecoin-automation/badge.svg)](https://snyk.io/test/github/thomasmktong/gatecoin-automation)
+[![Heroku](https://heroku-badge.herokuapp.com/?app=gatecoin-automation)](https://gatecoin-automation.herokuapp.com/) [![Known Vulnerabilities](https://snyk.io/test/github/thomasmktong/gatecoin-automation/badge.svg)](https://snyk.io/test/github/thomasmktong/gatecoin-automation)
 
 ## Install
 
