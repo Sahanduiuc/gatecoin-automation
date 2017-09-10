@@ -13,5 +13,5 @@ $ cp config.template.yml config.yml
 $ apistar run
 
 Running at http://localhost:8080/
-API doc at http://localhost:8080/docs/
+API doc at http://localhost:8080/api/docs/
 ```
