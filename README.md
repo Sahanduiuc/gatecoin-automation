@@ -6,7 +6,7 @@
 
 ```
 $ pip install -r requirements.txt
-$ cp config.template.yml config.yml
+$ cp .env.sample .env
 ```
 
 ## Run
