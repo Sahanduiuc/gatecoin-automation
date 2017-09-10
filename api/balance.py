@@ -8,23 +8,14 @@ import base64
 import json
 import os.path
 import pandas as pd
+from dotenv import load_dotenv, find_dotenv
 from urllib.request import Request, urlopen
 
-config_file = "./config.yml"
 default_encoding = "UTF-8"
 
-if(os.path.isfile(config_file)):
-
-    with open(config_file, 'r') as ymlfile:
-        cfg = yaml.load(ymlfile)
-
-    api_public_key = cfg['gatecoin']['api_public_key'].encode(default_encoding)
-    api_private_key = cfg['gatecoin']['api_private_key'].encode(default_encoding)
-
-else:
-    api_public_key = os.environ['gatecoin_api_public_key'].encode(default_encoding)
-    api_private_key = os.environ['gatecoin_api_private_key'].encode(default_encoding)
-
+load_dotenv(find_dotenv())
+api_public_key = os.environ['gatecoin_api_public_key'].encode(default_encoding)
+api_private_key = os.environ['gatecoin_api_private_key'].encode(default_encoding)
 
 def balance_get():
     
