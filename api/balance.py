@@ -17,6 +17,8 @@ load_dotenv(find_dotenv())
 api_public_key = os.environ['gatecoin_api_public_key'].encode(default_encoding)
 api_private_key = os.environ['gatecoin_api_private_key'].encode(default_encoding)
 
+print(" * Print public API key for debugging purpose:" + os.environ['gatecoin_api_public_key'])
+
 def balance_get():
     
     requestType = "GET"
