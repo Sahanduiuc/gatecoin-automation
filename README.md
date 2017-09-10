@@ -16,6 +16,10 @@ Running at http://localhost:8080/
 API doc at http://localhost:8080/api/docs/
 ```
 
+## Continuous Integration
+
+* Changes on `master` are automatically deployed to https://gatecoin-automation.herokuapp.com/
+
 ## Reference
 
 * API Star: https://github.com/encode/apistar
