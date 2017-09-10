@@ -21,7 +21,7 @@ API doc at http://localhost:8080/api/docs/
 ## Continuous Integration
 
 * Changes on `master` are automatically deployed to https://gatecoin-automation.herokuapp.com/
-* Vulnerabilities of pip requirements are checked in Synk
+* Vulnerabilities of pip requirements are checked in Snyk.io
 
 ## Reference
 
