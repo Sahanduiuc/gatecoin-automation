@@ -1,5 +1,7 @@
 # gatecoin-automation
 
+[![Known Vulnerabilities](https://snyk.io/test/github/thomasmktong/gatecoin-automation/badge.svg)](https://snyk.io/test/github/thomasmktong/gatecoin-automation)
+
 ## Install
 
 ```
@@ -19,6 +21,7 @@ API doc at http://localhost:8080/api/docs/
 ## Continuous Integration
 
 * Changes on `master` are automatically deployed to https://gatecoin-automation.herokuapp.com/
+* Vulnerabilities of pip requirements are checked in Synk
 
 ## Reference
 
