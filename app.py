@@ -6,10 +6,10 @@ import api.index
 import api.balance
 
 routes = [
-    Route('/', 'GET', api.index.index_get),
-    Route('/balance', 'GET', api.balance.balance_get),
-    Include('/docs', docs_urls),
-    Include('/static', static_urls)
+    Route('/api', 'GET', api.index.index_get),
+    Route('/api/balance', 'GET', api.balance.balance_get),
+    Include('/api/docs', docs_urls),
+    Include('/api/static', static_urls)
 ]
 
 app = App(routes=routes)
