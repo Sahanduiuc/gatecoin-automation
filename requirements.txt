@@ -1,3 +1,4 @@
 apistar
-whitenoise  
+whitenoise
+pandas
 PyYAML
