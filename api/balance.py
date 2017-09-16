@@ -1,6 +1,5 @@
 # Open your GateCoin account via https://gatecoin.com/register?referralCode=CESJBP
 
-import yaml
 import time 
 import hmac
 import hashlib
