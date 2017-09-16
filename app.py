@@ -2,10 +2,13 @@ from apistar import Include, Route
 from apistar.interfaces import Templates
 from apistar.frameworks.wsgi import WSGIApp as App
 from apistar.handlers import docs_urls, static_urls, serve_static
+from apistar.renderers import HTMLRenderer
+from apistar import annotate
 
 import api.index
 import api.balance
 
+@annotate(renderers=[HTMLRenderer()])
 def home(templates: Templates):
     home = templates.get_template('index.html')
     return home.render()

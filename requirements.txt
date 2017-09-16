@@ -1,4 +1,4 @@
-apistar
+apistar==0.3
 whitenoise
 pandas
 python-dotenv
