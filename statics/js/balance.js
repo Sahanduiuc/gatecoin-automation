@@ -83,7 +83,7 @@ $(window).on('resize', function() {
         addRow("<h6>Total</h6>", _.sumBy(option.series[0].data, 'value'));
 
         option.visualMap.max = _.maxBy(option.series[0].data, 'value')['value'] * 1.5;
-        option.visualMap.min = _.minBy(option.series[0].data, 'value')['value'];
+        option.visualMap.min = _.minBy(option.series[0].data, 'value')['value'] * 0.75;
 
         myChart.setOption(option);
         setTimeout(worker, 10000);
