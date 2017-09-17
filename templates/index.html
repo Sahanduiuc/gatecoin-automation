@@ -1,251 +1,114 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+
+
+
+<html lang="en">
 
 <head>
-    <title>Index</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/clusterize.js/0.17.6/clusterize.css" />
-    <style>
-        body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background: rgb(26, 26, 26);
-            color: white;
-        }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
 
-        .mock {
-            /* center things in this div */
-            text-align: center;
-            /* center this div */
-            margin: 0 auto;
-        }
+    <title>
+        Robocoin
+    </title>
 
-        .placeholder {
-            width: 960px;
-            height: 500px;
-            position: relative;
-            /* center this div */
-            margin: 0 auto;
-        }
-
-        svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        path.slice {
-            stroke-width: 2px;
-        }
-
-        polyline {
-            opacity: .3;
-            stroke: white;
-            stroke-width: 2px;
-            fill: none;
-        }
-
-        th,
-        td {
-            width: 200px;
-            text-align: center;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+    <link href="static/css/toolkit-inverse.css" rel="stylesheet">
+    <link href="static/css/application.css" rel="stylesheet">
+    <link href="static/css/balance.css" rel="stylesheet">
 
 </head>
 
+
 <body>
+    <div class="bw">
+        <div class="di">
+            <div class="em brh">
+                <nav class="bro">
+                    <div class="bri">
+                        <button class="bqe bqg brj" type="button" data-toggle="collapse" data-target="#nav-toggleable-md">
+                          <span class="aep">Toggle nav</span>
+                        </button>
+                        <a class="brk bsi" href="#">
+                            <h1>Robocoin</h1>
+                        </a>
+                    </div>
 
-    <div class="mock">
-        <div>
-            <input type="checkbox" id="useMockData" name="useMockData" checked="checked">
-            <label for="useMockData">Use mock data?</label>
+                    <div class="collapse bql" id="nav-toggleable-md">
+                        <form class="brm">
+                            <input class="form-control" type="text" placeholder="Search...">
+                            <button type="submit" class="po">
+                            </button>
+                        </form>
+                        <ul class="nav qq nav-stacked xx">
+                            <li class="ayx">Dashboards</li>
+                            <li class="qp">
+                                <a class="qn active" href="index.html">Overview</a>
+                            </li>
+
+                            <li class="ayx">More</li>
+                            <li class="qp">
+                                <a class="qn" href="http://getbootstrap.com" target="blank">
+                                  Bootstrap docs
+                                </a>
+                            </li>
+                        </ul>
+                        <hr class="bsj afx">
+                    </div>
+                </nav>
+            </div>
+            <div class="es bsk">
+                <div class="brv">
+                    <div class="brw">
+                        <h6 class="bry">Dashboards</h6>
+                        <h2 class="brx">Overview</h2>
+                    </div>
+
+                    <div class="qb brz">
+                        <div class="ayt brg">
+                            <input type="text" value="Test User" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="afx">
+
+                <div class="di awt agl">
+                    <div id="piechart" style="width: 100%; min-height: 500px"></div>
+                </div>
+
+                <div class="brc agl afz">
+                    <h3 class="brd bre">Portfolio Details</h3>
+                </div>
+
+                <div class="by afz">
+                    <h6 class="azi">
+                        Portfolio Compositions
+                    </h6>
+
+                    <a class="rp tr yg balance_template" href="#" id="balance_template">
+                        <span class="balance_ccy">Loading</span>
+                        <span class="balance_amt axn"></span>
+                    </a>
+
+                </div>
+                <a href="#" class="ce pi ahr">View trades</a>
+                <hr class="agl">
+            </div>
         </div>
     </div>
 
-    <div class="placeholder"></div>
-
-    <!--HTML-->
-    <div class="clusterize">
-        <table align="center">
-            <thead>
-                <tr>
-                    <th>Currency</th>
-                    <th>Value in HKD</th>
-                </tr>
-            </thead>
-        </table>
-        <div id="scrollArea" class="clusterize-scroll">
-            <table align="center">
-                <tbody id="contentArea" class="clusterize-content">
-                    <tr class="clusterize-no-data">
-                        <td colspan="2">Loading data…</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
-    <script src="https://cdn.rawgit.com/openexchangerates/accounting.js/master/accounting.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clusterize.js/0.17.6/clusterize.min.js"></script>
-    <script src="static/randomColor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/accounting@0.4.1/accounting.min.js"></script>
+    <script src="static/js/echarts.js"></script>
+    <script src="static/js/dark.js"></script>
+    <script src="static/js/balance.js"></script>
 
-    <script>
-        var svg = d3.select(".placeholder")
-            .append("svg")
-            .append("g")
-
-        svg.append("g")
-            .attr("class", "slices");
-        svg.append("g")
-            .attr("class", "labels");
-        svg.append("g")
-            .attr("class", "lines");
-
-        var width = 960,
-            height = 450,
-            radius = Math.min(width, height) / 2;
-
-        var pie = d3.layout.pie()
-            .sort(null)
-            .value(function (d) {
-                return d.value;
-            });
-
-        var arc = d3.svg.arc()
-            .outerRadius(radius * 0.8)
-            .innerRadius(radius * 0.4);
-
-        var outerArc = d3.svg.arc()
-            .innerRadius(radius * 0.9)
-            .outerRadius(radius * 0.9);
-
-        svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-        var key = function (d) { return d.data.label; };
-
-        (function worker() {
-
-            $.get('api/balance', function (data) {
-
-                data = _.filter(data, 'in_hkd').map(function (eachData) {
-
-                    if ($("#useMockData").is(':checked')) {
-                        return { label: eachData.ccy, value: Math.random() * 1000 }
-                    } else {
-                        return { label: eachData.ccy, value: eachData.in_hkd }
-                    }
-                });
-
-                change(data);
-                setTimeout(worker, 5000);
-            });
-        })();
-
-        function change(data) {
-
-            /* ------- DATA TABLE -------*/
-            var total = _.sumBy(data, 'value');
-            rows = data.map(function (eachData) {
-                return "<tr><td>" + eachData.label + "</td><td>" + accounting.formatMoney(eachData.value) + "</td></tr>";
-            });
-
-            rows.push("<tr><td><strong>Total</strong></td><td><strong>" + accounting.formatMoney(total) + "</strong></td></tr>");
-
-            var clusterize = new Clusterize({
-                rows: rows,
-                scrollId: 'scrollArea',
-                contentId: 'contentArea'
-            });
-
-            /* ------- PIE SLICES -------*/
-            var slice = svg.select(".slices").selectAll("path.slice")
-                .data(pie(data), key);
-
-            slice.enter()
-                .insert("path")
-                .style("fill", function (d) { return randomColor(); })
-                .attr("class", "slice");
-
-            slice
-                .transition().duration(1000)
-                .attrTween("d", function (d) {
-                    this._current = this._current || d;
-                    var interpolate = d3.interpolate(this._current, d);
-                    this._current = interpolate(0);
-                    return function (t) {
-                        return arc(interpolate(t));
-                    };
-                })
-
-            slice.exit()
-                .remove();
-
-            /* ------- TEXT LABELS -------*/
-
-            var text = svg.select(".labels").selectAll("text")
-                .data(pie(data), key);
-
-            text.enter()
-                .append("text")
-                .attr("dy", ".35em")
-                .attr("fill", "white")
-                .text(function (d) {
-                    return d.data.label;
-                });
-
-            function midAngle(d) {
-                return d.startAngle + (d.endAngle - d.startAngle) / 2;
-            }
-
-            text.transition().duration(1000)
-                .attrTween("transform", function (d) {
-                    this._current = this._current || d;
-                    var interpolate = d3.interpolate(this._current, d);
-                    this._current = interpolate(0);
-                    return function (t) {
-                        var d2 = interpolate(t);
-                        var pos = outerArc.centroid(d2);
-                        pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
-                        return "translate(" + pos + ")";
-                    };
-                })
-                .styleTween("text-anchor", function (d) {
-                    this._current = this._current || d;
-                    var interpolate = d3.interpolate(this._current, d);
-                    this._current = interpolate(0);
-                    return function (t) {
-                        var d2 = interpolate(t);
-                        return midAngle(d2) < Math.PI ? "start" : "end";
-                    };
-                });
-
-            text.exit()
-                .remove();
-
-            /* ------- SLICE TO TEXT POLYLINES -------*/
-
-            var polyline = svg.select(".lines").selectAll("polyline")
-                .data(pie(data), key);
-
-            polyline.enter()
-                .append("polyline");
-
-            polyline.transition().duration(1000)
-                .attrTween("points", function (d) {
-                    this._current = this._current || d;
-                    var interpolate = d3.interpolate(this._current, d);
-                    this._current = interpolate(0);
-                    return function (t) {
-                        var d2 = interpolate(t);
-                        var pos = outerArc.centroid(d2);
-                        pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
-                        return [arc.centroid(d2), outerArc.centroid(d2), pos];
-                    };
-                });
-
-            polyline.exit()
-                .remove();
-        };
-    </script>
 </body>
+
+</html>

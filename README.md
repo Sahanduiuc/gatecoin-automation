@@ -20,11 +20,12 @@ API doc at http://localhost:8080/api/docs/
 
 ## Continuous Integration
 
-* Changes on `master` are automatically deployed to https://gatecoin-automation.herokuapp.com/
+* Changes on `master` are automatically deployed to http://bit.ly/robocoin17
 * Vulnerabilities of pip requirements are checked in Snyk.io
 
 ## Reference
 
-* API Star: https://github.com/encode/apistar
-* D3 Gallery: https://github.com/d3/d3/wiki/Gallery
+* API Star Github: https://github.com/encode/apistar
+* API Star User Forum: https://discuss.apistar.org/
+* Baidu eCharts Example: http://echarts.baidu.com/examples.html 
 * Gatecoin API: https://gatecoin.com/api
